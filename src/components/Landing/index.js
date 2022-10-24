@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import {
   LandingContainer,
@@ -9,7 +9,9 @@ import {
   Text,
 } from "./landingStyles";
 import Button from "../../styles/Button";
-import bg from "../../assets/home/desktop/image-hero.jpg";
+import desktopBg from "../../assets/home/desktop/image-hero.jpg";
+import tabletBg from "../../assets/home/tablet/image-header.jpg";
+import mobileBg from "../../assets/home/mobile/image-header.jpg";
 import Container from "../../styles/Container";
 
 const containerStyles = {
@@ -22,10 +24,30 @@ const buttonStyles = {
   marginTop: 40,
 };
 const Landing = () => {
+  const [bg, setBg] = useState();
+
+  useEffect(() => {
+    function handleWindowResize() {
+      const { innerWidth } = window;
+
+      if (Number(innerWidth) > 768) {
+        setBg(desktopBg);
+      } else if (Number(innerWidth) > 375) {
+        setBg(tabletBg);
+      } else {
+        setBg(mobileBg);
+      }
+    }
+    if (!bg) {
+      handleWindowResize();
+    }
+    window.addEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
     <LandingContainer>
       <Container style={containerStyles}>
-        <LandingBg src={bg} />
+        <LandingBg src={bg} alt=" " />
         <ProductContainer>
           <Subtitle className="overline">NEW PRODUCT</Subtitle>
           <Title>XX99 MARK II HEADPHONES</Title>

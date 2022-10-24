@@ -30,3 +30,8 @@ export const MenuElement = styled.span`
     transition: 0.4s;
   }
 `;
+
+export const NavMenu = styled.img`
+  margin-right: 42px;
+  cursor: pointer;
+`;

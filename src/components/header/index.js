@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../../styles/Container";
-import { HeaderContainer, Logo, MenuElement } from "./headerStyles";
+import { HeaderContainer, Logo, MenuElement, NavMenu } from "./headerStyles";
 import { Link } from "react-router-dom";
 
+import navbar from "../../assets/navbar.png";
 import logo from "../../assets/audiophile.png";
 const containerStyles = {
   display: "flex",
@@ -13,11 +14,37 @@ const containerStyles = {
 };
 
 const Header = () => {
+  useEffect(() => {
+    function handleWindowResize() {
+      const { innerWidth } = window;
+      const menuLinks = document.getElementById("MenuLinks");
+      const navbarMenu = document.getElementById("navbarMenu");
+
+      if (menuLinks.classList.contains("hidden")) {
+        if (Number(innerWidth) > 768) {
+          menuLinks.classList.remove("hidden");
+          navbarMenu.classList.add("hidden");
+        }
+      } else {
+        if (Number(innerWidth) <= 768) {
+          menuLinks.classList.add("hidden");
+          navbarMenu.classList.remove("hidden");
+        }
+      }
+    }
+
+    handleWindowResize();
+
+    window.addEventListener("resize", handleWindowResize);
+  }, []);
   return (
     <HeaderContainer>
       <Container style={containerStyles}>
-        <Logo src={logo} alt="audiophile" />
-        <div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <NavMenu src={navbar} alt="menu" id="navbarMenu" />
+          <Logo src={logo} alt="audiophile" />
+        </div>
+        <div id="MenuLinks">
           <Link to="/">
             <MenuElement>HOME</MenuElement>
           </Link>

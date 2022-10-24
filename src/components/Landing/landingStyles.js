@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import desktopBg from "../../assets/home/desktop/image-hero.jpg";
 export const LandingContainer = styled.div`
   width: 100vw;
   height: 729px;
@@ -12,6 +11,11 @@ export const LandingBg = styled.img`
   position: absolute;
   right: 0;
   margin-right: -164px;
+  @media (max-width: 768px) {
+    margin-right: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
 `;
 
 export const ProductContainer = styled.div`
@@ -19,6 +23,10 @@ export const ProductContainer = styled.div`
   flex-direction: column;
   width: fit-content;
   padding-top: 225px;
+  @media (max-width: 768px) {
+    align-items: center;
+    margin: 0 auto;
+  }
 `;
 
 export const Subtitle = styled.span`
@@ -32,10 +40,19 @@ export const Title = styled.h1`
   z-index: 1;
   margin-top: 24px;
   margin-bottom: 24px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const Text = styled.p`
   width: 349px;
   opacity: 0.75;
   color: #fff;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+  @media (max-width: 375px) {
+    width: 328px;
+  }
 `;

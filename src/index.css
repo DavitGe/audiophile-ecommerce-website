@@ -21,6 +21,7 @@ h1 {
   letter-spacing: 2px;
   line-height: 58px;
 }
+
 h2 {
   font-size: 40px;
   font-weight: 700;
@@ -65,6 +66,10 @@ h6 {
   letter-spacing: 1px;
 }
 
+.hidden {
+  display: none;
+}
+
 h1,
 h2,
 h3,
@@ -76,4 +81,12 @@ span,
 a {
   margin: 0;
   text-decoration: none;
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 36px;
+    letter-spacing: 1.29px;
+    line-height: 40px;
+  }
 }
