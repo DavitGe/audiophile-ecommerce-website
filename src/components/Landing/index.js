@@ -8,7 +8,7 @@ import {
   Title,
   Text,
 } from "./landingStyles";
-import Button from "../../styles/Button";
+import Button from "../Button";
 import desktopBg from "../../assets/home/desktop/image-hero.jpg";
 import tabletBg from "../../assets/home/tablet/image-header.jpg";
 import mobileBg from "../../assets/home/mobile/image-header.jpg";
