@@ -1,60 +1,73 @@
-import React, { useEffect } from "react";
-import Container from "../../styles/Container";
+import React, { useEffect, useState } from "react";
+import Container from "../Container";
 import { HeaderContainer, Logo, MenuElement, NavMenu } from "./headerStyles";
 import { Link } from "react-router-dom";
 
 import navbar from "../../assets/navbar.png";
 import logo from "../../assets/audiophile.png";
-const containerStyles = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  borderBottom: "1px solid rgba(255,255,255, 0.2)",
-  height: 96,
-};
 
 const Header = () => {
+  const [width, setWidth] = useState();
   useEffect(() => {
     function handleWindowResize() {
       const { innerWidth } = window;
       const menuLinks = document.getElementById("MenuLinks");
       const navbarMenu = document.getElementById("navbarMenu");
+      setWidth(innerWidth);
 
-      if (menuLinks.classList.contains("hidden")) {
-        if (Number(innerWidth) > 768) {
+      if (Number(innerWidth) > 768) {
+        if (menuLinks.classList.contains("hidden")) {
           menuLinks.classList.remove("hidden");
+        }
+        if (!navbarMenu.classList.contains("hidden")) {
           navbarMenu.classList.add("hidden");
         }
-      } else {
-        if (Number(innerWidth) <= 768) {
+      } else if (Number(innerWidth) <= 768) {
+        if (!menuLinks.classList.contains("hidden")) {
           menuLinks.classList.add("hidden");
+        }
+        if (navbarMenu.classList.contains("hidden")) {
           navbarMenu.classList.remove("hidden");
         }
       }
     }
-
     handleWindowResize();
 
     window.addEventListener("resize", handleWindowResize);
   }, []);
+
+  const containerStyles = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    borderBottom: "1px solid rgba(255,255,255, 0.2)",
+    height: 96,
+    padding: width <= 716 && "0 24px",
+  };
+
   return (
     <HeaderContainer>
       <Container style={containerStyles}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <NavMenu src={navbar} alt="menu" id="navbarMenu" />
-          <Logo src={logo} alt="audiophile" />
+          <Logo
+            src={logo}
+            alt="audiophile"
+            className={width <= 716 && "hidden"}
+          />
         </div>
+        <Logo src={logo} alt="audiophile" className={width > 716 && "hidden"} />
         <div id="MenuLinks">
           <Link to="/">
             <MenuElement>HOME</MenuElement>
           </Link>
-          <Link to="/headphones">
+          <Link to="/category/headphones">
             <MenuElement>HEADPHONES</MenuElement>
           </Link>
-          <Link to="/speakers">
+          <Link to="/category/speakers">
             <MenuElement>SPEAKERS</MenuElement>
           </Link>
-          <Link to="/earphones">
+          <Link to="/category/earphones">
             <MenuElement style={{ marginRight: 0 }}>EARPHONES</MenuElement>
           </Link>
         </div>

@@ -83,10 +83,22 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1124px) {
+  h6 {
+    font-size: 15px;
+    line-height: 20.5px;
+    letter-spacing: 1px;
+  }
+}
+@media (max-width: 716px) {
   h1 {
     font-size: 36px;
     letter-spacing: 1.29px;
     line-height: 40px;
+  }
+  h2 {
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 38.25px;
   }
 }

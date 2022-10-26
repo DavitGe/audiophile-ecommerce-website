@@ -3,15 +3,13 @@ import styled from "styled-components";
 const Button = styled.button`
   width: 160px;
   height: 48px;
-  background-color: ${(props) => (props.bw ? "#fff" : "#D87D4A")};
-  border: ${(props) => (props.bw ? "1px solid #000" : "none")};
-  color: ${(props) => (props.bw ? "#000" : "#fff")};
+  background-color: ${(props) => (props.bw ? "#000" : "#D87D4A")};
+  color: #fff;
   transition: 0.2s;
+  border: none;
   cursor: pointer;
   &:hover {
-    background-color: ${(props) => (props.bw ? "#000" : "#FBAF85")};
-    border: ${(props) => (props.bw ? "1px solid #000" : "none")};
-    color: #fff;
+    background-color: ${(props) => (props.bw ? "#4C4C4C" : "#FBAF85")};
     transition: 0.4s;
   }
 `;

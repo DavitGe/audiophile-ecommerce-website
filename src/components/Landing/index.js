@@ -12,7 +12,7 @@ import Button from "../Button";
 import desktopBg from "../../assets/home/desktop/image-hero.jpg";
 import tabletBg from "../../assets/home/tablet/image-header.jpg";
 import mobileBg from "../../assets/home/mobile/image-header.jpg";
-import Container from "../../styles/Container";
+import Container from "../Container";
 
 const containerStyles = {
   height: "100%",
@@ -30,9 +30,9 @@ const Landing = () => {
     function handleWindowResize() {
       const { innerWidth } = window;
 
-      if (Number(innerWidth) > 768) {
+      if (Number(innerWidth) > 1124) {
         setBg(desktopBg);
-      } else if (Number(innerWidth) > 375) {
+      } else if (Number(innerWidth) > 767) {
         setBg(tabletBg);
       } else {
         setBg(mobileBg);

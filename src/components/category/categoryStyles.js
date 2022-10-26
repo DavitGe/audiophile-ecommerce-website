@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const CategoryWrapper = styled.div`
   max-height: 284px;
   width: 350px;
+  @media (max-width: 1124px) {
+    width: 223px;
+    max-height: 217px;
+  }
+  @media (max-width: 716px) {
+    margin-bottom: 72px;
+    width: 100%;
+  }
 `;
 
 export const CategoryContainer = styled.div`
@@ -14,11 +22,20 @@ export const CategoryContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: end;
+  @media (max-width: 1124px) {
+    height: 165px;
+  }
 `;
 
 export const CategoryImg = styled.img`
   height: 160px;
   margin-bottom: 12px;
+  @media (max-width: 1124px) {
+    margin-bottom: -12px;
+  }
+  @media (max-width: 716px) {
+    margin-bottom: -16px;
+  }
 `;
 
 export const CategoryTitle = styled.h6`
@@ -60,5 +77,13 @@ export const CategoryListWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 168px;
+  /* margin-bottom: 168px; */
+  @media (max-width: 1124px) {
+    margin-top: 150px;
+  }
+  @media (max-width: 716px) {
+    margin-top: 150px;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
