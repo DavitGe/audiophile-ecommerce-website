@@ -4,14 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import HomePage from "./pages/HomePage";
+import CategoryPage from "./pages/CategoryPage";
+import data from "./data.json";
 
-const HelloWorld = () => {
-  return (
-    <div>
-      <p>HOME</p>
-    </div>
-  );
-};
 function App() {
   return (
     <Router>
@@ -24,6 +19,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route
+          path="/category/:category"
+          element={<CategoryPage data={data} />}
+        />
       </Routes>
       <Footer />
     </Router>
