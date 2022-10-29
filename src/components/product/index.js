@@ -1,28 +1,44 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React from "react";
 import Container from "../Container";
-import { ImgBg, Wrapper } from "./productStyles";
+import Button from "../Button";
+import {
+  ImgBg,
+  Wrapper,
+  DesktopImg,
+  TabletImg,
+  MobileImg,
+  InfoWrapper,
+  Overline,
+  Title,
+  Text,
+} from "./productStyles";
 
-const StyledTest = styled.p`
-  .red {
-    color: #fff;
-  }
-`;
-
-const Product = ({ product }) => {
-  console.log(process.env);
-  console.log(product.image.desktop);
+const Product = ({ product, isNew, reverse }) => {
   return (
     <Container>
-      <Wrapper>
+      <Wrapper reverse={reverse}>
         <ImgBg>
-          <img
-            src={process.env.PUBLIC_URL + product.image.desktop}
+          <DesktopImg
+            src={process.env.PUBLIC_URL + product.image.desktop.slice(1)}
             alt={product.name}
           />
-          <StyledTest>black</StyledTest>
-          <StyledTest className="red">red</StyledTest>
+          <TabletImg
+            src={process.env.PUBLIC_URL + product.image.desktop.slice(1)}
+            alt={product.name}
+          />
+          <MobileImg
+            src={process.env.PUBLIC_URL + product.image.desktop.slice(1)}
+            alt={product.name}
+          />
         </ImgBg>
+        <InfoWrapper>
+          <Overline new={isNew} className="overline">
+            NEW PRODUCT
+          </Overline>
+          <Title new={isNew}>{product.name}</Title>
+          <Text>{product.description}</Text>
+          <Button>SEE PRODUCT</Button>
+        </InfoWrapper>
       </Wrapper>
     </Container>
   );

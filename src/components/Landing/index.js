@@ -42,6 +42,7 @@ const Landing = () => {
       handleWindowResize();
     }
     window.addEventListener("resize", handleWindowResize);
+    //eslint-disable-next-line
   }, []);
 
   return (
