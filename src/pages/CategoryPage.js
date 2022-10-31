@@ -20,6 +20,7 @@ const CategoryPage = ({ data }) => {
                 product={product}
                 isNew={counter === 1}
                 reverse={!(counter % 2)}
+                id={product.id}
                 key={product.id}
               />
             );

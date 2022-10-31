@@ -1,4 +1,6 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
 import Container from "../Container";
 import Button from "../Button";
 import {
@@ -13,7 +15,7 @@ import {
   Text,
 } from "./productStyles";
 
-const Product = ({ product, isNew, reverse }) => {
+const Product = ({ product, isNew, reverse, id }) => {
   return (
     <Container>
       <Wrapper reverse={reverse}>
@@ -37,7 +39,9 @@ const Product = ({ product, isNew, reverse }) => {
           </Overline>
           <Title new={isNew}>{product.name}</Title>
           <Text>{product.description}</Text>
-          <Button>SEE PRODUCT</Button>
+          <Link to={`/product/${id}`}>
+            <Button>SEE PRODUCT</Button>
+          </Link>
         </InfoWrapper>
       </Wrapper>
     </Container>

@@ -35,3 +35,9 @@ export const NavMenu = styled.img`
   margin-right: 42px;
   cursor: pointer;
 `;
+
+export const BlackBgForHeader = styled.div`
+  width: 100vw;
+  background-color: #000;
+  height: 96px;
+`;

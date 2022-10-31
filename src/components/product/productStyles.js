@@ -74,10 +74,10 @@ export const DesktopImg = styled.img`
 export const TabletImg = styled.img`
   display: none;
   height: 100%;
-  @media (min-width: 717px) {
+  @media (max-width: 1124px) {
     display: flex;
   }
-  @media (min-width: 1124px) {
+  @media (max-width: 716px) {
     display: none;
   }
 `;
