@@ -102,3 +102,13 @@ a {
     line-height: 38.25px;
   }
 }
+
+.activeSvg {
+  fill: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.activeSvg:hover {
+  fill: #d87d4a;
+  transition: 0.2s;
+}
