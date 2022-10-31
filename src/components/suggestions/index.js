@@ -22,7 +22,6 @@ const Suggestions = ({ product, data }) => {
         <SuggestionListContainer>
           {product.others.map((suggestion) => {
             const suggestedEl = data.find((el) => el.slug === suggestion.slug);
-            console.log("suggestedEl", suggestedEl);
             return (
               <SuggestionContainer>
                 <ImgBg>
@@ -46,14 +45,12 @@ const Suggestions = ({ product, data }) => {
                   />
                 </ImgBg>
                 <SuggestionTitle>{suggestion.name}</SuggestionTitle>
-                <Button>
-                  <Link
-                    to={`/product/${suggestedEl.id}`}
-                    style={{ textDecoration: "none", color: "#fff" }}
-                  >
-                    SEE PRODUCT
-                  </Link>
-                </Button>
+                <Link
+                  to={`/product/${suggestedEl.id}`}
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <Button>SEE PRODUCT</Button>
+                </Link>
               </SuggestionContainer>
             );
           })}

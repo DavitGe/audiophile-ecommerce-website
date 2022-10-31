@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div`
   left: 0;
   top: 0;
   width: 100vw;
-  z-index: 10;
+  z-index: 100;
 `;
 
 export const Logo = styled.img`

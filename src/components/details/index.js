@@ -124,7 +124,7 @@ const Details = ({ product }) => {
             <div>
               {product.includes.map((unit) => {
                 return (
-                  <UnitsContainer>
+                  <UnitsContainer key={unit.slug}>
                     <UnitsAmount>{unit.quantity}x</UnitsAmount>
                     <UnitsText>{unit.item}</UnitsText>
                   </UnitsContainer>

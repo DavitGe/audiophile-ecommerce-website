@@ -11,7 +11,7 @@ import data from "./data.json";
 function App() {
   return (
     <Router>
-      <Header />
+      <Header data={data} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
