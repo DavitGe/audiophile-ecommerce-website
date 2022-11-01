@@ -7,6 +7,12 @@ const Back = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    color: #d87d4a;
+    opacity: 1;
+    transition: 0.2s;
+  }
 `;
 
 const BackLink = () => {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Container from "../Container";
+import { Link } from "react-router-dom";
 import {
   AmountContainer,
   CartElInfo,
@@ -143,7 +144,11 @@ const CartPopup = ({ data, closeCartPopup }) => {
               <Label>TOTAL</Label>
               <TotalPrice>${total}</TotalPrice>
             </HorizontalContainer>
-            <CheckoutButton onClick={checkoutHandler}>CHECKOUT</CheckoutButton>
+            <Link to="/checkout">
+              <CheckoutButton onClick={checkoutHandler}>
+                CHECKOUT
+              </CheckoutButton>
+            </Link>
           </PopupContainer>
         </PopupWrapper>
       </Container>

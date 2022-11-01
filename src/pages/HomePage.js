@@ -5,6 +5,8 @@ import MainAdd from "../components/advertisment/MainAdd";
 import SecondaryAdd from "../components/advertisment/SecondaryAdd";
 import Category from "../components/category";
 import Banner from "../components/banner";
+import Footer from "../components/footer";
+
 
 const HomePage = () => {
   return (
@@ -14,6 +16,7 @@ const HomePage = () => {
       <MainAdd />
       <SecondaryAdd />
       <Banner />
+      <Footer />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Product from "../components/product";
 import Topbar from "../components/topbar";
 import Category from "../components/category";
 import Banner from "../components/banner";
+import Footer from "../components/footer";
 
 const CategoryPage = ({ data }) => {
   const { category } = useParams();
@@ -31,6 +32,7 @@ const CategoryPage = ({ data }) => {
       </div>
       <Category />
       <Banner />
+      <Footer />
     </div>
   );
 };

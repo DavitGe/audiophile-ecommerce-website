@@ -12,6 +12,10 @@ const Button = styled.button`
     background-color: ${(props) => (props.bw ? "#4C4C4C" : "#FBAF85")};
     transition: 0.4s;
   }
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
 `;
 
 export default Button;

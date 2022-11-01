@@ -7,6 +7,8 @@ import { BlackBgForHeader } from "../components/header/headerStyles";
 import Suggestions from "../components/suggestions";
 import Category from "../components/category";
 import Banner from "../components/banner";
+import Footer from "../components/footer";
+
 
 const ProductPage = ({ data }) => {
   const { id } = useParams();
@@ -21,6 +23,7 @@ const ProductPage = ({ data }) => {
       <Suggestions product={product} data={data} />
       <Category />
       <Banner />
+      <Footer />
     </div>
   );
 };
