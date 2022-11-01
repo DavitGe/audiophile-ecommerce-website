@@ -6,10 +6,13 @@ import { Link } from "react-router-dom";
 import navbar from "../../assets/navbar.png";
 import logo from "../../assets/audiophile.png";
 import CartPopup from "../cartPopup";
+import CategoryPopup from "../categoryPopup";
 
 const Header = ({ data }) => {
   const [width, setWidth] = useState();
   const [cartPopup, setCartPopup] = useState(false);
+  const [categoryPopup, setCategoryPopup] = useState(false);
+
   useEffect(() => {
     function handleWindowResize() {
       const { innerWidth } = window;
@@ -54,13 +57,28 @@ const Header = ({ data }) => {
   const closeCartPopup = () => {
     setCartPopup(false);
   };
+  const openCategoryPopup = () => {
+    setCategoryPopup(true);
+  };
+
+  const closeCategoryPopup = () => {
+    setCategoryPopup(false);
+  };
   return (
     <div>
       {cartPopup && <CartPopup data={data} closeCartPopup={closeCartPopup} />}
+      {categoryPopup && (
+        <CategoryPopup closeCategoryPopup={closeCategoryPopup} />
+      )}
       <HeaderContainer>
         <Container style={containerStyles}>
           <div style={{ display: "flex", alignItems: "center" }}>
-            <NavMenu src={navbar} alt="menu" id="navbarMenu" />
+            <NavMenu
+              src={navbar}
+              alt="menu"
+              id="navbarMenu"
+              onClick={openCategoryPopup}
+            />
             <Link to="/" className={width <= 716 && "hidden"}>
               <Logo>
                 <svg width="143" height="25" xmlns="http://www.w3.org/2000/svg">
