@@ -11,7 +11,7 @@ import data from "./data.json";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <Header data={data} />
       <Routes>
