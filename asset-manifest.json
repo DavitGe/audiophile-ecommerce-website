@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "http://localhost:3000/static/css/main.53bddb91.css",
-    "main.js": "http://localhost:3000/static/js/main.e416add1.js",
+    "main.js": "http://localhost:3000/static/js/main.e74be933.js",
     "static/media/image-speaker-zx9.png": "http://localhost:3000/static/media/image-speaker-zx9.153cd899b91a08b22b1a.png",
     "static/media/image-best-gear.jpg": "http://localhost:3000/static/media/image-best-gear.4d4a28e9e7c9ab158dd8.jpg",
     "static/media/image-header.jpg": "http://localhost:3000/static/media/image-header.d200a3583e72c7981f46.jpg",
@@ -17,10 +17,10 @@
     "static/media/icon-facebook.svg": "http://localhost:3000/static/media/icon-facebook.e9773e52bc64ea377cb95af7ccb6877e.svg",
     "static/media/icon-order-confirmation.svg": "http://localhost:3000/static/media/icon-order-confirmation.6970134820e756e31360b1293c6f3e62.svg",
     "main.53bddb91.css.map": "http://localhost:3000/static/css/main.53bddb91.css.map",
-    "main.e416add1.js.map": "http://localhost:3000/static/js/main.e416add1.js.map"
+    "main.e74be933.js.map": "http://localhost:3000/static/js/main.e74be933.js.map"
   },
   "entrypoints": [
     "static/css/main.53bddb91.css",
-    "static/js/main.e416add1.js"
+    "static/js/main.e74be933.js"
   ]
 }
