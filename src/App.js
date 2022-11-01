@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./helpers/ScrollToTop";
 import Header from "./components/header";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
@@ -11,6 +12,7 @@ import data from "./data.json";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header data={data} />
       <Routes>
         <Route path="/" element={<HomePage />} />
