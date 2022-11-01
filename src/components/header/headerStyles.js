@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
   z-index: 100;
 `;
 
-export const Logo = styled.img`
+export const Logo = styled.div`
   width: 143px;
   height: 25px;
   background: transparent;
