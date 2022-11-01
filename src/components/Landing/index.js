@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import { Link } from "react-router-dom";
 import {
   LandingContainer,
   LandingBg,
@@ -56,7 +57,11 @@ const Landing = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </Text>
-          <Button style={buttonStyles}>SEE PRODUCT</Button>
+          <Button style={buttonStyles}>
+            <Link to="/product/2" style={{ color: "#fff" }}>
+              SEE PRODUCT
+            </Link>
+          </Button>
         </ProductContainer>
       </Container>
     </LandingContainer>
