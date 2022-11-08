@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/DavitGe/audiophile-ecommerce-website)
-- Live Site URL: [gh-pages](https://davitge.github.io/audio-ecommerce-website/)
+- Live Site URL: [gh-pages](https://audiophile-ecommerce-website-gamma.vercel.app/)
 
 ## My process
 
