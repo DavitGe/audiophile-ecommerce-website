@@ -4,7 +4,6 @@ export const LandingContainer = styled.div`
   width: 100vw;
   height: 729px;
   background-color: #191919;
-  /* background-color: #fff; */
 `;
 export const LandingBg = styled.img`
   height: 100%;
